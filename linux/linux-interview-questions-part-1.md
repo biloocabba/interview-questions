@@ -1,4 +1,4 @@
-Note:  Thanks to Gracco Guimarães for preparation.reference of original repo links mentioned below
+Note:  Thanks to **Gracco Guimarães** for preparation.reference of original repo links mentioned below
 
 - https://github.com/trimstray/test-your-sysadmin-skills
 
