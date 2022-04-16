@@ -2046,24 +2046,6 @@ Answer: When we have a process in progress that will handle  prompt, there will 
 Control+C sends SIGINT that will interrupt the application. Usually causing to abort, but a process will be able for intercepting the signal and do whatever it likes: for instance, from  Bash prompt, try hitting Ctrl-C. In Bash, it just will cancel whatever we have typed and provides a blank prompt as opposed to quitting Bash.
 Control+Z will send SIGTSTP to a foreground application, effectively put it in the background on suspended mode. This will very useful when we required the application to continue its process while we are doing another job in the current shell. When we will finish the job, we can go back into the application by running fg (or %x where x is the job number as shown in jobs).
 
-388.I want to troubleshoot my network but I don’t know how does the traceroute command work exactly?
-Answer: Traceroute will be a program which shows  the route taken by packets through a network. It will trace the route of packets from source to destination. It will be enable used when network will not work as well and we want to examine where can be the problem. Traceroute will send a UDP packet to the destination taking advantage of ICMP’s messages. ICMP will have two types of messages: error-reporting messages and query messages. Query messages will generally used for diagnose network problems, the ping tool will use ICMP’s query messages. The error-reporting messages as the name will suggest report errors if any in the IP packet; it will use Destination unreachable and Time exceeded errors message. It will work by theses steps:
-Traceroute will create a UDP packet from the source to destination with a TTL(Time-to-live) = 1
-The UDP packet will reache the first router where the router decrements the value of TTL by 1, thus make  UDP packet’s TTL = 0 and hence the packet will get dropped.
-Noticing that the packet will be dropped, it will send an ICMP message (Time exceeded) back to the source.
-Traceroute will make a note of the router’s address and the time taken for the round-trip.
-It will send two more packets in the same way for getting an average value of the round-trip time. Usually, the first round-trip will take longer than the other two due to the delay in ARP finding the physical address, the address will stay in the ARP cache during the second and the third time and hence the process will speed up.
-The steps will have occurred up till now, occur again and again until the destination will be reached. The only change will happen is that the TTL will be incremented by 1 when the UDP packet will  be sent to next router/host.
-Once the destination will reached, Time will exceeded ICMP message will NOT sent back this time because the destination will already  reached.
-But, the UDP packet will be used by Traceroute specify the destination port number to be one which is not usually used for UDP. Hence, when the destination computer will verifies the headers of the UDP packet, the packet will get dropped due to the improper port being used and an ICMP message (this time – Destination Unreachable) will be sent back to the source.
-When Traceroute will encounter this message, it will understand that the destination will be reached. Even the destination will be reached three times for getting the average of the round-trip time.
-
-389. NSCD sometimes die itself and DNS resolving doesn’t happen properly. How can we avoid NSCD for DNS and there is a disadvantage to bypass it?
-Answer: Nscd is a daemon which  will provide a cache for the most common name service requests. When resolving a user, group, host, service…, the process can first try to connect to the nscd socket (something like /var/run/nscd/socket).
-If nscd will died, the connect can fail, and so nscd will not be used and which will not be a problem.
-If it will be in a hung state, then the connect will hang or succeed. If it will succeed the client can send it will request (provide IP address for www.google.com, passwd entries…). We can configure nscd for disabling caching for any type of database for instance by having enable-cache hosts no in /etc/nscd.conf for the hosts database.
-However, if nscd will be in a hung state, it will not be able to even give that simple will do answer, therefore that is necessarily help. nscd will be a caching daemon, It is meant to improve performance. Disabling it will potentially make those lookups slower. However, that is only true for some kind of databases. For instance, if  user/service/group databases will only in small files (/etc/passwd, /etc/group, /etc/services), then using nscd for those can probably bring little benefit if any. nscd can be useful for the hosts database.
-
 390. How can I redirect both stderr and stdin at once?
 Answer: command > file.log 2>&1 : Redirect stderr to “where stdout is currently going”. In this case, It is a file opened in append mode. The &1 will reuse the file descriptor that stdout currently uses.
 command 2>&1 | tee -a file.txt
@@ -2123,21 +2105,7 @@ $ sudo grub-install –root-directory=/mnt/ /dev/sda ( where /dev/sda is your pr
 Installation finished. No error reported.
 6. Reboot  system, remove bootable CD and we should keep the boot menu ready when the system starts.
 
-394. How do you boot your systeminto the following modes, when you are in some trouble?
-Answer: We boot system into the following modes, when we are in some trouble:
-a. Rescue mode
-b. Single user mode
-c. Emergency mode
-Rescue mode will provide the ability for booting a small Linux environment from an external bootable device such as a CD-ROM, or USB drive instead of the system’s hard drive.Rescue mode will be provided to help  with system from repairing the file system or fixing certain issues which prevent normal operations.
-In order to get into the rescue mode, change the BIOS settings of the machine for booting from the external media. Once the system will  boot using bootable disk, add the keyword rescue as a kernel parameter. Else we will provide the parameter “linux rescue” in the graphical boot interface.
-In single-user mode, the system will boot to runlevel 1.  It will have more additional functionalities compared for switching to runlevel 1 from other levels.
-The local file systems will be mounted in this mode, but the network will not be activated.
-Following steps are used for booting into single-user mode:
-1. At the GRUB splash screen during the booting process, press any key for entering into the GRUB interactive menu.
-2. Select the proper version of kernel that  wish to boot and type “a” to append the line.
-3. Go to the end of the line.  Type “single” as a separate word.
-4. Press Enter to exit edit mode and type “b” to boot into single usermode now.
-In emergency mode, we are booting into the most minimal environment possible. The root file system will be mounted read-only and almost nothing is set up. The main advantage of emergency mode over single-user mode is that the init files will not be loaded. If the init is corrupted, we will still mount file systems to recover data which could be lost during a re-installation.  Use the same method as described above for single-user mode, except one word, replace the keyword single with the keyword “emergency” to boot into emergency mode.
+
 
 395. You are in a directory /home/user/downloaded/ and you want to share the files in this directory quickly over web without configuring an httpd server so how can you do it with python?
 Answer: The Python script language will allow a quick httpd service which is called SimpleHTTPServer using which we will share the local directory we are using the command, for example
