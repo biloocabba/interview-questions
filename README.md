@@ -9,6 +9,8 @@ A collection of super-popular Interview questions, along with answers, and some 
 
 **we are not making any $$$ from it.Just helping community to share the knowledge.**
 
+We collate the information in this repository through students submissions , if anyone finds the exact content elsewhere and from other authors, please reach out to us on **info@cloudnloud.com** and we will give appropriate credits in our content.
+
 ## Table of Contents
 
 ### Topics
