@@ -66,7 +66,7 @@ We collate the information in this repository through students submissions , if 
 # Linux
 
 + [Linux Questions 1 ](./linux/linux-interview-questions-part-3.md)
-+ [Linux Questions 2 ](./ansible/linux-interview-questions-part-4.md)
++ [Linux Questions 2 ](./linux/linux-interview-questions-part-4.md)
 
 
 # Docker Container Interview Questions
