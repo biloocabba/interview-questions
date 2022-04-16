@@ -28,16 +28,6 @@ Note: Keep in mind that many of these questions are open-ended and could lead to
 + [In any Data project what needs to be asked ](./solution-architect/technology/data/azure-data-lake.md)
 
 
-# LINUX Administration
-
-+ [Simple Linux Questions](./linux/linux-interview-questions-part-1.md)
-+ [Medium Linux Questions](./linux/linux-interview-questions-part-1.md)
-+ [Hard Linux Questions](./linux/linux-interview-questions-part-1.md)
-+ [Expert Linux Questions](./linux/linux-interview-questions-part-1.md)
-+ [Networking Questions](./linux/linux-interview-questions-part-1.md)
-+ [Linux Glance](./linux/linux-interview-questions-part-2.md)
-+ [Test your Linux Skills](./linux/linux-interview-questions-part-3.md)
-+ [Refresh your Linux Skills](./linux/linux-interview-questions-part-4.md)
 
 # Ansible
 
