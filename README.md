@@ -7,7 +7,7 @@ A collection of super-popular Interview questions, along with answers, and some 
 
 **Disclaimer** : The views expressed and the content shared are those of the author and dont reflext the views of the author's employer or cloudnloud platform
 
-** we are not making any $$$ from it.Just helping community to share the knowledge.**
+**we are not making any $$$ from it.Just helping community to share the knowledge.**
 
 ## Table of Contents
 
