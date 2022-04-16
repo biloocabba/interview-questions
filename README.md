@@ -4,7 +4,12 @@
 
 A collection of super-popular Interview questions, along with answers, and some code-snippets that will help you to prepare for technical interviews. Many of these questions are real questions from real interviews. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but this repo like reference tool, that helps you to prepare for technical interview.
 
-Note: Keep in mind that many of these questions are open-ended and could lead to interesting discussions that tell you more about the person's capabilities than a straight answer would.
+
+**Disclaimer** : The views expressed and the content shared are those of the author and dont reflext the views of the author's employer or cloudnloud platform
+
+**we are not making any $$$ from it.Just helping community to share the knowledge.**
+
+We collate the information in this repository through students submissions , if anyone finds the exact content elsewhere and from other authors, please reach out to us on **info@cloudnloud.com** and we will give appropriate credits in our content.
 
 ## Table of Contents
 
