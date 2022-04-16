@@ -63,6 +63,11 @@ We collate the information in this repository through students submissions , if 
 + [Validate yourself Self-Assesment](./devops/DevOps-Engineer-assignment.md)
 + [Validate yourself Deep Glance](./devops/DevOps-Deep-Glance-Again.md)
 
+# Linux
+
++ [Linux Questions 1 ](./linux/linux-interview-questions-part-3.md)
++ [Linux Questions 2 ](./ansible/linux-interview-questions-part-4.md)
+
 
 # Docker Container Interview Questions
 
