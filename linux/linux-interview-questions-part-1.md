@@ -1,3 +1,9 @@
+Note:  Thanks to **Gracco Guimarães** for preparation.reference of original repo links mentioned below
+
+- https://github.com/trimstray/test-your-sysadmin-skills
+
+- https://github.com/gracco/sysadmin-interview-questions
+
 # LINUX Administration
 
   1. [Simple Linux Questions](#simple)
